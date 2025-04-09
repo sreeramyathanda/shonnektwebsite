@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outfit Inspo | SHONNEKT</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .inspo-wrapper {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .carousel-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: start;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      border: 2px solid hsl(350, 33.3%, 13.5%);
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="inspo-wrapper">
+    <h1>Outfit Inspiration</h1>
+    <p class="scroll-hint">Swipe or scroll &rarr; for more looks</p>
+
+    <div class="carousel-scroll">
+      <div class="carousel-item">
+        <img src="./images/look1.jpg" alt="Outfit 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look2.jpg" alt="Outfit 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look3.jpg" alt="Outfit 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look4.jpg" alt="Outfit 4" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look5.jpeg" alt="Outfit 5" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look6.jpg" alt="Outfit 6" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look7.jpg" alt="Outfit 7" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look8.jpg" alt="Outfit 8" />
+      </div>
+      <div class="carousel-item">
+        <img src="./images/look9.jpg" alt="Outfit 9" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

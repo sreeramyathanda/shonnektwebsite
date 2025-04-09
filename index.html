@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>shonnekt</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="nav-links">
+      <a href="outfit-inspos.html">outfit inspos</a>
+      <a href="our-blog.html">our blog</a>
+      <a href="faq.html">faq</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/shonnekt/"><i class="fab fa-instagram"></i></a>
+      <a href="https://in.linkedin.com/company/shonnekt" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main-content">
+    <!-- Left Side -->
+    <div class="hero-text">
+      <h1>SHONNEKT</h1>
+      <p>sell & buy fashion with just a click!</p>
+      <p class="coming-soon">demo app coming soon, signup for the waitlist --></p>
+
+      <!-- Email Form -->
+      <form name="submit-to-google-sheet" class="email-form">
+        <input name="email" type="email" placeholder="Enter your email" required>
+        <input type="submit" value="Submit">
+      </form>
+      
+      <!-- Add this BELOW the form -->
+      <p id="form-status" style="margin-top: 1rem; color: hsl(350, 33.3%, 13.5%); display: none;">Submitting...</p>
+      <p id="thank-you-message" style="margin-top: 1rem; color: hsl(350, 33.3%, 13.5%); display: none;">Thank you for signing up!</p>
+      
+    </div>
+
+    <div class="carousel-previews">
+      <a href="outfit-inspos.html" class="carousel">
+        <img src="./images/1.png" alt="Cozy Neutrals Look" />
+      </a>
+      <a href="outfit-inspos.html" class="carousel">
+        <img src="./images/2.png" alt="Fashion Collage" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Copyright © 2025</p>
+    <a href="privacypolicy.html">Privacy Policy</a>
+  </div>
+
+  <!-- Form Script -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxVB47q9tT9mzf6ieaScasvNZRcPpMKZnPBo3IhT4-ZfBfYgT958pD0eLS71kUkPcfj/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          form.reset();
+          thankYouMessage.style.display = 'block';
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+    
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

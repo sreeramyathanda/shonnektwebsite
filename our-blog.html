@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Blog | SHONNEKT</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: hsl(350, 33.3%, 13.5%);
+      color: white;
+    }
+
+    .blog-wrapper {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: hsl(350, 33.3%, 13.5%);
+      margin-bottom: 1rem;
+    }
+
+    .intro-text {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: hsl(350, 33.3%, 13.5%);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      color: hsl(350, 33.3%, 13.5%);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 1rem;
+    }
+
+    .blog-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .blog-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blog-wrapper">
+    <h1>Our Blog</h1>
+    <p class="intro-text">Style stories, trend breakdowns & what we’re currently obsessed with.</p>
+
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="./images/blog1.jpg" alt="coming soon" />
+        <div class="blog-content">
+          <div class="blog-title">Coming Soon</div>
+          <div class="blog-excerpt">Everything About Shonnekt</div>
+        </div>
+      </div>
+
+      <!-- Add more blog posts here -->
+    </div>
+  </div>
+
+</body>
+</html>
